@@ -4,14 +4,17 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
 
-  password: {
-    type: String,
-    required: true
-  },
+ 
   email: {
     type: String,
     required: true
   },
+  password: {
+    type: String,
+    required: true
+  },
+  resetToken: String,
+  resetTokenExpiration: String,
   cart: {
     items: [
       {
